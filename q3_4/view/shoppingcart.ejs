@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="utf-8">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" type="text/css" href="/css/shoppingcart.css">
+</head>
+
+<body>
+    <div class="back-home">
+        <a href="/">Back to shop</a>
+    </div>
+    <div class="container">
+        <% if (shoppingCart==undefined || Object.keys(shoppingCart).length===0) { %>
+            <span class="product-price">
+                No items
+            </span>
+            <% } %>
+                <% for(key in shoppingCart) {%>
+                    <div class="item-container">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="product-desc">
+                                    <span class="product-title">
+                                        <%= shoppingCart[key].name %>
+                                    </span>
+                                    <span class="product-price">
+                                        Quantity<b>
+                                            <%= shoppingCart[key].quantity %>
+                                        </b>
+                                    </span>
+                                </div>
+                                <div class="product-properties">
+
+                                    <span class="product-price">
+                                        USD<b>
+                                            <%= shoppingCart[key].price %>
+                                        </b>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
+    </div>
+</body>
+
+</html>

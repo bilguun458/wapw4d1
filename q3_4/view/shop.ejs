@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="utf-8">
+    <title>Shop</title>
+    <link rel="stylesheet" type="text/css" href="/css/shop.css">
+</head>
+
+<body>
+    <div class="container">
+        <% for(product of products) {%>
+            <div class="item-container">
+                <a href="<%= '/product/' + product.id %>">
+                    <div class="card">
+                        <div class="card-head">
+                            <img src="<%= product.image %>" alt="img" class="card-image">
+                        </div>
+                        <div class="card-body">
+                            <div class="product-desc">
+                                <span class="product-title">
+                                    <%= product.name %>
+                                </span>
+                            </div>
+                            <div class="product-properties">
+
+                                <span class="product-price">
+                                    USD<b>
+                                        <%= product.price %>
+                                    </b>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <% } %>
+    </div>
+</body>
+
+</html>

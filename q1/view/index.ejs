@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="utf-8">
+    <title>Cookies</title>
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+</head>
+
+<body>
+    <form action="/" method="POST">
+        <label for="key">Key</label>
+        <input type="text" id="key" name="key">
+        <label for="value">Value</label>
+        <input type="text" id="value" name="value">
+        <input type="submit" value="Submit cookie">
+    </form>
+
+    <div class="table-container">
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+            <% for(key in cookies) {%>
+                <tr>
+                    <td>
+                        <%= key %>
+                    </td>
+                    <td>
+                        <%= cookies[key] %>
+                    </td>
+                </tr>
+                <% } %>
+        </table>
+    </div>
+</body>
+
+</html>

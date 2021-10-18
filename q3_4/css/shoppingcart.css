@@ -1,0 +1,77 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 810px;
+    margin: 0px auto;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.item-container {
+    width: 440px;
+    height: 70px;
+    margin: 30px auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.card {
+    border-radius: 25px;
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.card-body {
+    height: 55px;
+    background: #fff;
+    border-radius: 0 0 25px 25px;
+    display: flex;
+    flex-direction: row;
+}
+
+.product-desc {
+    border-right: 1px solid gray;
+    flex: 1;
+}
+
+.product-title {
+    padding: 20px;
+    display: block;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+.product-properties {
+    max-width: 80px;
+}
+
+.product-price {
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.product-price b {
+    margin-left: 5px;
+}
+
+.back-home {
+    width: 500px;
+    margin: 20px auto;
+}
+
+.back-home a {
+    font-size: 20px;
+    font-weight: bold;
+    color: lightcoral;
+}

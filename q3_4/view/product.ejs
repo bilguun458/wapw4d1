@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        <%= product.name %>
+    </title>
+    <link rel="stylesheet" type="text/css" href="/css/product.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-head">
+                <img src="<%= product.image %>" alt="img" class="card-image">
+            </div>
+            <div class="card-body">
+                <div class="product-desc">
+                    <span class="product-title">
+                        <%= product.name %>
+                    </span>
+                </div>
+                <div class="product-properties">
+
+                    <span class="product-price">
+                        USD<b>
+                            <%= product.price %>
+                        </b>
+                    </span>
+                </div>
+                <div class="action">
+                    <form action="/addToCart" method="POST">
+                        <input type="text" id="name" name="name" value="<%= product.name %>">
+                        <input type="text" id="price" name="price" value="<%= product.price %>">
+                        <input class="add-card-btn" type="submit" value="Add to cart">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
